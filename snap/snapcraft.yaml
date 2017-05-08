@@ -14,7 +14,7 @@ description: |
   tracks or you can simply use the playback library to use the klystrack files in your own
   games and other software.
 grade: stable
-confinement: strict
+confinement: devmode
 apps:
   klystrack:
     command: desktop-launch env KLYSTRACK=$SNAP $SNAP/bin.release/klystrack
@@ -39,6 +39,9 @@ parts:
       - examples
       - res
       - key
+      - doc/LICENSE
+      - doc/SDL.txt
+      - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
     source-tag: 1.7.1
     after: [desktop-qt5]
