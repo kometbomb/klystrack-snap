@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.7.1
+Name=klystrack
+Icon=icon.png
+Exec=cd ${SNAP};bin.release/klystrack
+

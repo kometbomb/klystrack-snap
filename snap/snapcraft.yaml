@@ -1,0 +1,44 @@
+name: klystrack
+type: app
+version: "1.7.1"
+summary: klystrack is a fakebit chiptune tracker
+icon: snap/gui/icon.png
+description: |
+  klystrack is an application for creating music reminiscent of the style of music from 8-bit
+  computers or, chiptunes. It is a complete package; included are a "tracker" style sequencer
+  and a built-in synthesizer capable of a wide range sounds - including but not limited to basic 
+  subtractive synthesis, frequency modulation and sample playback. Sounds can be easily beefed
+  up by using the effect chain. It is possbile to import a handful of file formats, including 
+  Protracker .MOD, Fasttracker 2 .XM, the Cave Story music format (.ORG) and Rob Hubbard 
+  Commodore 64 SID files. Tunes can be easily exported as a single mixdown .WAV or separate 
+  tracks or you can simply use the playback library to use the klystrack files in your own
+  games and other software.
+grade: stable
+confinement: strict
+apps:
+  klystrack:
+    command: desktop-launch env KLYSTRACK=$SNAP $SNAP/bin.release/klystrack
+    plugs: [home, unity7]
+parts:
+  klystron:
+    plugin: nil
+    source: https://github.com/kometbomb/klystron.git
+    source-tag: for-klystrack-1.7.1
+  klystrack:
+    build-packages:
+      - gcc
+      - libsdl2-dev
+      - libsdl2-image-dev
+    plugin: make
+    make-parameters: 
+      - KLYSTRON=../../klystron/src
+      - CFG=release
+      - RES_PATH=.
+    artifacts: 
+      - bin.release/klystrack
+      - examples
+      - res
+      - key
+    source: https://github.com/kometbomb/klystrack.git
+    source-tag: 1.7.1
+    after: [desktop-qt5]
