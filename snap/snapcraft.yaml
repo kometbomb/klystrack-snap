@@ -1,6 +1,6 @@
 name: klystrack
 type: app
-version: "1.7.3"
+version: "1.7.4"
 summary: klystrack is a fakebit chiptune tracker
 icon: snap/gui/icon.png
 description: |
@@ -20,10 +20,6 @@ apps:
     command: desktop-launch env KLYSTRACK=$SNAP $SNAP/bin.release/klystrack
     plugs: [home, unity7]
 parts:
-  klystron:
-    plugin: nil
-    source: https://github.com/kometbomb/klystron.git
-    source-tag: for-klystrack-1.7.1
   klystrack:
     build-packages:
       - gcc
@@ -39,9 +35,10 @@ parts:
       - examples
       - res
       - key
-      - doc/LICENSE
+      - LICENSE
       - doc/SDL.txt
       - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
-    source-tag: 1.7.3
+    source-type: git
+    source-tag: 1.7.4-rc
     after: [desktop-qt5]
