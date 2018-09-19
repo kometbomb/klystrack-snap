@@ -3,9 +3,12 @@ jobs:
   build:
     docker:
       - image: buildpack-deps:trusty
+    working_directory: ~/klystrack-snap
     steps:
-      - run: sudo apt-get update && apt-get install -y software-properties-common
-      - run: sudo add-apt-repository ppa:snappy-dev/tools && apt-get update
-      - run: DEBIAN_FRONTEND=noninteractive apt-get install -y snapcraft
+      - run:
+          name: Install dependencies
+          command: DEBIAN_FRONTEND=noninteractive sudo apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:snappy-dev/tools && apt-get update && apt-get install -y snapcraft
       - checkout
-      - run: cd klystrack-snap && snapcraft
+      - run:
+          name: Build snap
+          command: snapcraft
