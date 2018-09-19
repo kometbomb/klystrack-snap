@@ -20,10 +20,6 @@ apps:
     command: desktop-launch env KLYSTRACK=$SNAP $SNAP/bin.release/klystrack
     plugs: [home, unity7]
 parts:
-  klystron:
-    plugin: nil
-    source: https://github.com/kometbomb/klystron.git
-    source-tag: for-klystrack-1.7.1
   klystrack:
     build-packages:
       - gcc
@@ -43,5 +39,6 @@ parts:
       - doc/SDL.txt
       - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
+    source-type: git
     source-tag: 1.7.3
     after: [desktop-qt5]
