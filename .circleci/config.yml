@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Install dependencies
-          command: DEBIAN_FRONTEND=noninteractive sudo apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:snappy-dev/tools && apt-get update && apt-get install -y snapcraft
+          command: export DEBIAN_FRONTEND=noninteractive && sudo apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:snappy-dev/tools && apt-get update && apt-get install -y snapcraft
       - checkout
       - run:
           name: Build snap
