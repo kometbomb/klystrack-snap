@@ -1,6 +1,6 @@
 name: klystrack
 type: app
-version: "1.7.3"
+version: "1.7.4"
 summary: klystrack is a fakebit chiptune tracker
 icon: snap/gui/icon.png
 description: |
@@ -40,5 +40,5 @@ parts:
       - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
     source-type: git
-    source-tag: 1.7.3
+    source-tag: 1.7.4-rc
     after: [desktop-qt5]
