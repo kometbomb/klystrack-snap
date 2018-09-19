@@ -35,8 +35,8 @@ workflows:
           filters:
             branches:
               ignore: master
-              tags:
-                ignore: /.*/
+            tags:
+              ignore: /.*/
 
   main:
     jobs:
