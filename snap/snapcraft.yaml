@@ -35,7 +35,7 @@ parts:
       - examples
       - res
       - key
-      - doc/LICENSE
+      - LICENSE
       - doc/SDL.txt
       - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
