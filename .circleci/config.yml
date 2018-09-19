@@ -6,6 +6,6 @@ jobs:
     steps:
       - run: sudo apt-get update && apt-get install -y software-properties-common
       - run: sudo add-apt-repository ppa:snappy-dev/tools && apt-get update
-      - run: yes | apt-get install -y snapcraft
+      - run: DEBIAN_FRONTEND=noninteractive apt-get install -y snapcraft
       - checkout
       - run: snapcraft
