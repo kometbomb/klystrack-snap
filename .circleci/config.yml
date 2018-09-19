@@ -4,6 +4,6 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
-      - run: apt-get update && apt-get install -y snapcraft
+      - run: sudo add-apt-repository ppa:snappy-dev/tools && apt-get update && apt-get install -y snapcraft
       - checkout
       - run: snapcraft
