@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - run: apt-get update && apt-get install -y snapcraft
+      - checkout
+      - run: snapcraft
