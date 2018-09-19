@@ -14,7 +14,6 @@ description: |
   tracks or you can simply use the playback library to use the klystrack files in your own
   games and other software.
 grade: stable
-confinement: devmode
 apps:
   klystrack:
     command: desktop-launch env KLYSTRACK=$SNAP $SNAP/bin.release/klystrack
