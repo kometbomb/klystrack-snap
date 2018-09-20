@@ -39,5 +39,5 @@ parts:
       - doc/SDL_image.txt
     source: https://github.com/kometbomb/klystrack.git
     source-type: git
-    source-tag: 1.7.4-rc2
+    source-tag: 1.7.4
     after: [desktop-qt5]
