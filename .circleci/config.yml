@@ -6,6 +6,7 @@ jobs:
     working_directory: ~/klystrack-snap
     steps:
       - checkout
+      - run: apt-get update
       - run:
           name: Build snap
           command: snapcraft
