@@ -3,7 +3,7 @@ type: app
 version: "1.7.4"
 summary: klystrack is a fakebit chiptune tracker
 icon: snap/gui/icon.png
-description: |
+description: >
   klystrack is an application for creating music reminiscent of the style of music from 8-bit
   computers or, chiptunes. It is a complete package; included are a "tracker" style sequencer
   and a built-in synthesizer capable of a wide range sounds - including but not limited to basic
